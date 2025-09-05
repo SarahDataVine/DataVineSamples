@@ -1,6 +1,6 @@
 # SQL Portfolio – Sarah Lawrence
 
-This folder contains examples of my SQL development work, including schema design, computed columns, and reporting queries. These samples are drawn from real-world database projects, with sensitive data removed or anonymized.
+Examples of my SQL development work, including schema design, computed columns, and reporting queries. These samples are drawn from real-world database projects, with sensitive data removed or anonymized.
 
 ## Contents
 
