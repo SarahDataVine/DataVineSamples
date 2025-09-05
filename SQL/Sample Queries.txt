@@ -1,0 +1,56 @@
+/*========================================================
+  Sample Queries – Sarah Lawrence
+  Demonstrates joins, aggregation, window functions,
+  and date calculations.
+========================================================*/
+
+-- 1) Total revenue by customer (last 12 months)
+SELECT 
+    c.CustomerName,
+    SUM(i.Amount) AS TotalRevenue
+FROM Invoices i
+JOIN Customers c ON i.CustomerID = c.CustomerID
+WHERE i.InvoiceDate >= DATEADD(YEAR, -1, GETDATE())
+GROUP BY c.CustomerName
+ORDER BY TotalRevenue DESC;
+
+
+-- 2) Running total of job costs by week
+SELECT
+    j.JobID,
+    j.WeekEnding,
+    SUM(j.Cost) OVER (
+        PARTITION BY j.JobID 
+        ORDER BY j.WeekEnding
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS RunningCost
+FROM JobCosts j;
+
+
+-- 3) Average invoice turnaround time (days to payment)
+SELECT
+    AVG(DATEDIFF(DAY, i.InvoiceDate, i.PaidDate)) AS AvgDaysToPayment
+FROM Invoices i
+WHERE i.PaidDate IS NOT NULL;
+
+
+-- 4) Top 5 products by sales volume
+SELECT TOP 5
+    p.ProductName,
+    SUM(li.Qty) AS TotalUnitsSold
+FROM LineItems li
+JOIN Products p ON li.ProductID = p.ProductID
+GROUP BY p.ProductName
+ORDER BY TotalUnitsSold DESC;
+
+
+-- 5) Jobs scheduled in the next 30 days with customer info
+SELECT
+    j.JobID,
+    j.ScheduledDate,
+    c.CustomerName,
+    j.Description
+FROM Jobs j
+JOIN Customers c ON j.CustomerID = c.CustomerID
+WHERE j.ScheduledDate BETWEEN GETDATE() AND DATEADD(DAY, 30, GETDATE())
+ORDER BY j.ScheduledDate;
