@@ -10,13 +10,13 @@ Each project demonstrates practical solutions for small-to-mid sized businesses 
 
 ## Featured Projects
 
-- [**Landscape Database**](Landscape%20DB.md)  
+- [**Landscape Database**](Landscape_DB.md)  
   Custom Microsoft Access + Azure SQL system for a landscaping company. Features batch invoicing, payroll, revenue tracking, and Power BI dashboards.  
 
-- [**Engineering Database**](Engineering%20DB.md)  
+- [**Engineering Database**](Engineering_DB.md)  
   Database solution built for a small engineering company to track production processes.  
 
-- [**Access to Azure SQL Migration**](Azure%20Migration.md)  
+- [**Access to Azure SQL Migration**](Azure_Migration.md)  
   Migrated an existing Access back end to Azure SQL for multi-user support, performance, and scalability.
 
 ---
