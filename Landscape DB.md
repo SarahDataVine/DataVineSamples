@@ -23,13 +23,14 @@ This project replaced a small landscaping company’s paper and spreadsheet syst
 
 ## Screenshots
 
-| Estimate Form | Invoice Form |
-|---------------|--------------|
-| ![Estimate Form](Images/EstimateRedacted.jpg) | ![Invoice Form](Images/Invoice%20Redacted.jpg) |
+| Navigation Menu |
+|-----------------|
+| ![Navigation Menu](Images/LDJS%20Nav%20Redacted.jpg) |
 
-| Job Sheet | Navigation Menu |
-|-----------|-----------------|
-| ![Job Sheet](Images/JobSheed%20Redacted.jpg) | ![Navigation Menu](Images/LDJS%20Nav%20Redacted.jpg) |
+| Invoice | Estimate | Job Sheet |
+|--------------|---------------|-----------|
+| ![Invoice Form](Images/Invoice%20Redacted.jpg) | ![Estimate Form](Images/EstimateRedacted.jpg) | ![Job Sheet](Images/JobSheet%20Redacted.jpg) |
+|
 
 ## Tools & Technologies
 - Microsoft Access  
