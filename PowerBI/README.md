@@ -1,16 +1,12 @@
 # Power BI Portfolio – Sarah Lawrence
 
-This folder highlights Power BI dashboards I designed as part of larger database projects.  
+Highlighting Power BI dashboards I designed as part of a larger database project.  
 
 ## Dashboard Examples
 
-| Revenue & Costs Dashboard | KPI Overview |
+| Client/Property Mapping Dashboard | KPI Overview |
 |---------------------------|--------------|
 | ![Dashboard](../Case%20Studies/Screenshots/LDJS%20Power%20BI%20Redacted.jpg) | ![KPI View](../Case%20Studies/Screenshots/LDJS%20Power%20BI%202%20Redacted.jpg) |
-
-| Navigation Menu | |
-|-----------------|--|
-| ![Navigation](../Case%20Studies/Screenshots/LDJS%20Nav%20Redacted.jpg) | |
 
 ---
 
