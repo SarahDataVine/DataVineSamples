@@ -5,8 +5,8 @@ Highlighting Power BI dashboards I designed as part of a larger database project
 ## Dashboard Examples
 
 | Client/Property Mapping Dashboard | KPI Overview |
-|---------------------------|--------------|
-| ![Dashboard](../Case%20Studies/Screenshots/LDJS%20Power%20BI%20Redacted.jpg) | ![KPI View](../Case%20Studies/Screenshots/LDJS%20Power%20BI%202%20Redacted.jpg) |
+|-----------------------------------|--------------|
+| ![Dashboard](Case%20Studies/Screenshots/LDJS%20Power%20BI%20Redacted.jpg) | ![KPI View](Case%20Studies/Screenshots/LDJS%20Power%20BI%202%20Redacted.jpg) |
 
 ---
 
