@@ -1,0 +1,67 @@
+USE [LDJS Local];                    
+GO
+/*-------------------------------------------------------
+  0) Drop existing primary key on LineItems if any
+-------------------------------------------------------*/
+DECLARE @pkName sysname, @sql nvarchar(max);
+
+SELECT @pkName = kc.name
+FROM   sys.key_constraints kc
+WHERE  kc.parent_object_id = OBJECT_ID('dbo.LineItems')
+  AND  kc.type = 'PK';
+
+IF @pkName IS NOT NULL
+BEGIN
+    SET @sql = N'ALTER TABLE dbo.LineItems DROP CONSTRAINT [' + @pkName + N'];';
+    EXEC (@sql);
+END;
+GO
+/*-------------------------------------------------------
+  1) Add identity column LineItemID if not present
+-------------------------------------------------------*/
+IF NOT EXISTS (
+    SELECT 1
+    FROM sys.columns
+    WHERE object_id = OBJECT_ID('dbo.LineItems')
+      AND name = 'LineItemID'
+)
+BEGIN
+    ALTER TABLE dbo.LineItems
+        ADD LineItemID INT IDENTITY(1,1) NOT NULL;
+END;
+GO
+/*-------------------------------------------------------
+  2) Make LineItemID the primary key
+-------------------------------------------------------*/
+ALTER TABLE dbo.LineItems
+    ADD CONSTRAINT PK_LineItems_LineItemID PRIMARY KEY CLUSTERED (LineItemID);
+GO
+/*-------------------------------------------------------
+  3) Replace / add computed column TotalforLine
+-------------------------------------------------------*/
+IF EXISTS (
+    SELECT 1 FROM sys.computed_columns
+    WHERE object_id = OBJECT_ID('dbo.LineItems')
+      AND name = 'TotalforLine'
+)
+BEGIN
+    ALTER TABLE dbo.LineItems DROP COLUMN TotalforLine;
+END;
+
+ALTER TABLE dbo.LineItems
+    ADD TotalforLine AS (ISNULL(Qty,0) * ISNULL(PriceEach,0)) PERSISTED;
+GO
+/*-------------------------------------------------------
+  4) Add rowversion for concurrency if not present
+-------------------------------------------------------*/
+IF NOT EXISTS (
+    SELECT 1
+    FROM sys.columns
+    WHERE object_id = OBJECT_ID('dbo.LineItems')
+      AND name = 'RowVer'
+)
+BEGIN
+    ALTER TABLE dbo.LineItems
+        ADD RowVer ROWVERSION NOT NULL;
+END;
+GO
