@@ -21,6 +21,16 @@ This project replaced a small landscaping company’s paper and spreadsheet syst
 - Provided real-time reporting for leadership, scaling the company from **$50K to $300K in annual revenue**.  
 - Increased efficiency and collaboration across the business through multi-user access.  
 
+## Screenshots
+
+| Estimate Form | Invoice Form |
+|---------------|--------------|
+| ![Estimate Form](EstimateRedacted.jpg) | ![Invoice Form](Invoice%20Redacted.jpg) |
+
+| Job Sheet | Navigation Menu |
+|-----------|-----------------|
+| ![Job Sheet](JobSheed%20Redacted.jpg) | ![Navigation Menu](LDJS%20Nav%20Redacted.jpg) |
+
 ## Tools & Technologies
 - Microsoft Access  
 - Azure SQL Database  
