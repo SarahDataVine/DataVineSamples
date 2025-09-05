@@ -4,19 +4,19 @@ Examples of my SQL development work, including schema design, computed columns, 
 
 ## Contents
 
-### 1. SQL_Development_Sample.pdf
+### 1. [**SQL Development Sample**](SQL_Development_Sample_Sarah_Lawrence.pdf)
 A documented example of adding **computed columns** to a SQL Server table to support custom business logic and reporting.  
 - Includes use of `PERSISTED` computed columns for performance and indexing.  
 - Demonstrates logic for completion month, supply budget, adjusted scheduling, and priority scoring.
 
-### 2. DropPKAddRowVer.sql
+### 2. [**DropPKAddRowVer.sql**](DropPKAddRowVer.txt)
 A schema update script for an invoice line item table.  
 - Drops and redefines the primary key.  
 - Adds an identity column for unique row identification.  
 - Creates a computed column (`TotalForLine`) for line totals.  
 - Adds a `ROWVERSION` column to support optimistic concurrency.  
 
-### 3. sample_queries.sql
+### 3. [**Sample Queries**](Sample%20Queries.txt)
 A set of example reporting queries showing SQL fluency:  
 - Revenue by customer (last 12 months).  
 - Running totals with window functions.  
