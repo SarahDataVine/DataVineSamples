@@ -1,8 +1,11 @@
-# DataVineSamples
+# Sarah Lawrence – Data & BI Portfolio
 
-Portfolio of database and BI development projects, including SQL scripts, Azure migrations, and Power BI examples.  
-Created and maintained by **Sarah Lawrence**.
+This portfolio showcases database and business intelligence projects I’ve developed,  
+including consulting work completed through my company [**DataVine**](https://getdatavine.com).  
 
+I specialize in **Access-to-SQL migrations, Power BI dashboards, and SQL development**
+
+Each project demonstrates practical solutions for small-to-mid sized businesses — replacing spreadsheets and manual processes with scalable, reliable systems.
 ---
 
 ## Featured Projects
@@ -29,3 +32,10 @@ Created and maintained by **Sarah Lawrence**.
 ## Power BI
 
 - [**Power BI Portfolio**](PowerBI.md) – screenshots of dashboards and KPI views built on Azure SQL data.
+
+---
+
+## Get in Touch
+
+For more projects and details, visit [**DataVine**](https://getdatavine.com)  
+or connect with me on [**LinkedIn**](https://www.linkedin.com/in/sarahjane97124).
