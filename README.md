@@ -23,9 +23,9 @@ Each project demonstrates practical solutions for small-to-mid sized businesses 
 
 ## SQL Work
 
-- [**SQL Development Sample**](SQL/SQL_Development_Sample_Sarah_Lawrence.pdf) – computed columns & reporting logic  
-- [**DropPKAddRowVer.sql**](SQL/DropPKAddRowVer.txt) – schema update script with rowversion concurrency  
-- [**Sample Queries**](SQL/Sample%20Queries.txt) – reporting and analytics queries  
+- [**SQL Development Sample**](SQL_Development_Sample_Sarah_Lawrence.pdf) – computed columns & reporting logic  
+- [**DropPKAddRowVer.sql**](DropPKAddRowVer.txt) – schema update script with rowversion concurrency  
+- [**Sample Queries**](Sample%20Queries.txt) – reporting and analytics queries  
 
 ---
 
